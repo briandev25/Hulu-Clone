@@ -8,7 +8,7 @@ const Thumbnail = forwardRef(({ result }, ref)  =>{
     <div ref={ref} className='group cursor-pointer transition duration-100 ease-in transform sm:hover:scale-105 hover:z-50 '>
        <Image layout='responsive' height={1080} width={1920} src={
          `${basePath}${result.backdrop_path || result.poster_path}` || `|| ${basePath}${result.poster_path}`
-         } />
+         } alt="" />
         <div className='p-2'>
           <p className='truncate max-w-md '>{result.overview}</p>
           <h2 className='mt-1 text-2xl text-white transition-all duration-100 ease-in-out group-hover:font-bold '>{result.title || result.name}</h2>
